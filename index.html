@@ -182,19 +182,17 @@
 
 
 								<!-- HERO QUICK FORM -->
-								<form id="emailForm" action="https://formspree.io/f/xzblwenk" method="POST" class="quick-form form-stroke mt-45">
-
-									<!-- Form Inputs -->	
+								<form id="my-form" action="https://formspree.io/f/xzblwenk" method="POST" class="quick-form form-stroke mt-45">
+									<!-- Form Inputs -->
 									<div class="input-group">
-										<input type="email" name="email" class="form-control email r-06" placeholder="Your email address" autocomplete="off" required>
+										<input type="email" name="email" class="form-control email r-06" placeholder="Your email address"
+											autocomplete="off" required>
 										<span class="input-group-btn form-btn">
 											<button type="submit" class="btn r-06 btn--theme hover--theme submit">Get Early Access</button>
-										</span>										
-									</div>	
-
+										</span>
+									</div>
 									<!-- Form Message -->
-									<div class="quick-form-msg"><span class="loading"></span></div>	
-									
+									<div id="my-form-status" class="quick-form-msg"></div>
 								</form>
 
 								<!-- Text -->
@@ -888,8 +886,7 @@
 										<h2 class="s-40 w-700">Know your subscribers. Create better content. Get more sponsors. Improve your conversion rates.</h2>
 
 										<!-- HERO QUICK FORM -->
-										<form id="emailForm" action="https://formspree.io/f/xzblwenk" method="POST" class="quick-form form-stroke mt-45">
-										
+										<form id="my-form" action="https://formspree.io/f/xzblwenk" method="POST" class="quick-form form-stroke mt-45">
 											<!-- Form Inputs -->
 											<div class="input-group">
 												<input type="email" name="email" class="form-control email r-06" placeholder="Your email address"
@@ -898,10 +895,8 @@
 													<button type="submit" class="btn r-06 btn--theme hover--theme submit">Get Early Access</button>
 												</span>
 											</div>
-										
 											<!-- Form Message -->
-											<div class="quick-form-msg"><span class="loading"></span></div>
-										
+											<div id="my-form-status" class="quick-form-msg"></div>
 										</form>
 										
 										<!-- Text -->
@@ -1003,12 +998,13 @@
 		</script>
 		-->	
 
+		<!-- FormSpree form code -->
 		<script>
-			var form = document.getElementById("emailForm");
+			var form = document.getElementById("my-form");
 
 			async function handleSubmit(event) {
 				event.preventDefault();
-				var status = document.getElementById("form-status");
+				var status = document.getElementById("my-form-status");
 				var data = new FormData(event.target);
 				fetch(event.target.action, {
 					method: form.method,
@@ -1018,22 +1014,22 @@
 					}
 				}).then(response => {
 					if (response.ok) {
-						status.innerHTML = "Nice! We'll get back to you very soon...";
+						status.innerHTML = "Success! You'll hear from us soon.";
 						form.reset()
 					} else {
 						response.json().then(data => {
-							if (Object.hasOwnProperty.call(data, 'errors')) {
+							if (Object.hasOwn(data, 'errors')) {
 								status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
 							} else {
-								status.innerHTML = "Oops! There was a problem submitting your form"
+								status.innerHTML = "Oops! There was a problem submitting your email."
 							}
 						})
 					}
 				}).catch(error => {
-					status.innerHTML = "Oops! There was a problem submitting your form"
+					status.innerHTML = "Oops! There was a problem submitting your email."
 				});
 			}
-			form.addEventListener("submit", handleSubmit);
+			form.addEventListener("submit", handleSubmit)
 		</script>
 
 
