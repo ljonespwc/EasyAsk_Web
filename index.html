@@ -1005,7 +1005,7 @@
 			function handleSubmit(event) {
 				event.preventDefault();
 				var form = event.target;  // Get the form that triggered the event
-				var status = document.querySelector(".btn-txt");  // targeting the entire <p> element with the class btn-txt
+				var status = form.nextElementSibling;  // Get the next sibling element after the form
 
 				var data = new FormData(form);
 				fetch(form.action, {
