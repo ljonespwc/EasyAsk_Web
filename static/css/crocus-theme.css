@@ -730,6 +730,7 @@ ul.hero-section-list {
   align-items: flex-start; /* This keeps the list items left-aligned */
   margin: 0 auto; /* This will center the ul within its parent */
   list-style: disc;
+  width: 90%;
 }
 
 ul.hero-section-list li.list-item,
