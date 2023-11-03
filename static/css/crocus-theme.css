@@ -728,16 +728,30 @@ ul.hero-section-list {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* This keeps the list items left-aligned */
-  width: fit-content; /* This makes sure the ul only takes the width it needs */
   margin: 0 auto; /* This will center the ul within its parent */
-  
-  /* The styles below are inherited from your .simple-list class */
   list-style: disc;
 }
 
-ul.hero-section-list li.list-item p {
-  margin-bottom: 8px; /* Spacing between list items */
+ul.hero-section-list li.list-item,
+ul.hero-section-list li.list-item p,
+ul.hero-section-list h6 {
+  text-align: left; /* Ensures left alignment */
 }
+
+ul.hero-section-list li.list-item p {
+  margin-bottom: 0px; /* Spacing between list items */
+}
+
+/* Override styles for smaller screens if needed */
+@media (max-width: [the_breakpoint_value]px) {
+    ul.hero-section-list,
+    ul.hero-section-list li.list-item,
+    ul.hero-section-list li.list-item p,
+    ul.hero-section-list h6 {
+        text-align: left; /* Ensures left alignment for smaller screens */
+    }
+}
+
 
 /*------------------------------------------*/
 /*  BUTTON SETTINGS
