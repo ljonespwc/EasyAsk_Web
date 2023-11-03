@@ -1004,7 +1004,7 @@
 
 			async function handleSubmit(event) {
 				event.preventDefault();
-				var status = document.querySelector(".btn-txt span");  // targeting the span within the btn-txt class
+				var status = document.querySelector(".btn-txt");  // targeting the btn-txt class
 				var data = new FormData(event.target);
 				fetch(event.target.action, {
 					method: form.method,
