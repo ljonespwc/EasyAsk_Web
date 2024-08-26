@@ -27,7 +27,7 @@ html {
 
 body {
   font-family: 'Rubik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #595d60;
+  color: #6c757d;
   line-height: 1.6666;
   font-weight: 400;
 }
@@ -719,40 +719,6 @@ ol.digit-list {
 ol.digit-list p {
   margin-bottom: 8px;
 }
-
-/*------------------------------------------*/
-/*  HERO SECTION LIST
-/*------------------------------------------*/
-
-ul.hero-section-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* This keeps the list items left-aligned */
-  margin: 0 auto; /* This will center the ul within its parent */
-  list-style: disc;
-  width: 90%;
-}
-
-ul.hero-section-list li.list-item,
-ul.hero-section-list li.list-item p,
-ul.hero-section-list h6 {
-  text-align: left; /* Ensures left alignment */
-}
-
-ul.hero-section-list li.list-item p {
-  margin-bottom: 0px; /* Spacing between list items */
-}
-
-/* Override styles for smaller screens if needed */
-@media (max-width: [the_breakpoint_value]px) {
-    ul.hero-section-list,
-    ul.hero-section-list li.list-item,
-    ul.hero-section-list li.list-item p,
-    ul.hero-section-list h6 {
-        text-align: left; /* Ensures left alignment for smaller screens */
-    }
-}
-
 
 /*------------------------------------------*/
 /*  BUTTON SETTINGS
