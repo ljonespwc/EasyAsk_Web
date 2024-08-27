@@ -134,6 +134,11 @@
 									<!-- Form Message -->
 									<div id="my-form-status" class="quick-form-msg"></div>
 								</form>
+								
+								<!-- Text -->
+								<p class="btn-txt ico-15">
+									<span class="flaticon-email"></span> We'll get back to you pronto.
+								</p>
 
 							</div>	
 						</div>
@@ -1377,23 +1382,25 @@
 								<!-- Title -->
 								<h2 class="s-46 w-700">Unleash Goalzilla on your website
 								</h2>
-			
+
 								<!-- HERO QUICK FORM -->
-								<form id="my-form" action="https://formspree.io/f/xzblwenk" method="POST"
-									class="quick-form form-stroke mt-45">
+								<form id="my-form-bottom" action="https://formspree.io/f/xzblwenk" method="POST" class="quick-form form-stroke mt-45">
 									<!-- Form Inputs -->
 									<div class="input-group">
-										<input type="email" name="email" class="form-control email r-06"
-											placeholder="Your email address" autocomplete="off" required>
+										<input type="email" name="email" class="form-control email r-06" placeholder="Your email address"
+											autocomplete="off" required>
 										<span class="input-group-btn form-btn">
-											<button type="submit" class="btn r-06 btn--theme hover--theme submit ml-10">Get Early
-												Access</button>
+											<button type="submit" class="btn r-06 btn--theme hover--theme submit ml-10">Get Early Access</button>
 										</span>
 									</div>
 									<!-- Form Message -->
 									<div id="my-form-status" class="quick-form-msg"></div>
 								</form>
-			
+								
+								<!-- Text -->
+								<p class="btn-txt ico-15">
+									<span class="flaticon-email"></span> We'll get back to you pronto.
+								</p>
 							</div>
 						</div>
 					</div> <!-- END HERO TEXT -->
@@ -1500,8 +1507,9 @@
 				});
 			}
 
-			// Add event listener to form
+			// Add event listener to both forms
 			document.getElementById("my-form").addEventListener("submit", handleSubmit);
+			document.getElementById("my-form-bottom").addEventListener("submit", handleSubmit);
 		</script>
 
 	</body>
